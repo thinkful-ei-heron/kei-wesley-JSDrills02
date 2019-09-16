@@ -67,4 +67,16 @@ function daysInMonth(month,leapYear = false){
   }
 }
 
-console.log(daysInMonth('February'));
+function rps(yourHand){
+  const oppHand = Math.floor(Math.random()*3)+1;
+  if (yourHand !== 1 && yourHand !== 2 && yourHand !== 3){
+    throw new Error('Must enter a valid integer value (1, 2, or 3');
+  }
+  if (oppHand === yourHand){
+    console.log('It\'s a tie!');
+  } else if (oppHand > yourHand){
+    console.log('You lost!');
+  } else {
+    console.log('You win!');
+  }
+}
